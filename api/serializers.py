@@ -6,7 +6,7 @@ class WallSerializer(serializers.ModelSerializer):
         model = Wall
         fields = '__all__'
 
-class RoutesSerializer(serializers.ModelSerializer):
+class RouteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Route
         fields = '__all__'
