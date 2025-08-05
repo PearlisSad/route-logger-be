@@ -1,40 +1,63 @@
-# 🧗‍♂️ Route Logger Backend
+# Route Logger Backend
 
-This is the Django backend for the Route Logger app. It powers the climbing wall and route logging functionality.
+This is the Django backend for the Route Logger app
 
----
+## Description
 
-## 🛠 Requirements
+Django project that uses REST api to communicate with React frontend.
 
-- Python 3.10+
-- pip
-- virtualenv or `python3 -m venv`
-- PostgreSQL (optional but recommended for production)
+## Getting Started
 
----
+* Clone repository
+[git clone https://github.com/your-username/route-logger-be.git](https://github.com/PearlisSad/route-logger-be.git)
 
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-git clone https://github.com/your-username/route-logger-be.git
+*CD into Directory
 cd route-logger-be
-2. Create and Activate a Virtual Environment
 
-Linux/macOS
-bash
-Copy
-Edit
+*Create Virtual Environment*
 python3 -m venv venv
-source venv/bin/activate
 
-Windows (Command Prompt)
-
-python -m venv venv
-venv\Scripts\activate
-python -m venv venv
+*Open Virtual Environment
+Windows:
 venv\Scripts\Activate.ps1
 
-3. Install Dependencies
-   
-pip install -r requirements.txt
+macOS/Linux:
+source venv/bin/activate
+
+### Dependencies
+
+* Python 3.10+
+* 
+* ex. Windows 10
+
+### Installing
+
+* How/where to download your program
+* Any modifications needed to be made to files/folders
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [Django React Authentication]([https://github.com/matiassingers/awesome-readme](https://github.com/desphixs/JWT-Django-Rest-Framework-React))
