@@ -13,6 +13,9 @@ Front end projext found [here](https://github.com/PearlisSad/route-logger-fe).
 
 ## Running
 
-- Activate venv if not already active `source <venv directory>/bin/activate`.
+- Activate venv if not already active
+  - Mac/Linux: `source <venv directory>/bin/activate`.
+  - Windows: `workon MyProjectEnvt`
 - Apply migrations `python manage.py migrate`.
 - Run server `python manage.py runserver`.
+- `workon MyProjectEnvt`
