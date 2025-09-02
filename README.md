@@ -35,6 +35,14 @@ Front end projext found [here](https://github.com/PearlisSad/route-logger-fe).
   - Mac: `source venv/bin/activate`
 - To deactivate the Virtual Environment, just execute `deactivate` while the Virtual Environment is running.
 
+### Database
+
+Reference:
+
+- [mongo local docker](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)
+- [django mongo](https://www.mongodb.com/resources/products/compatibilities/mongodb-and-django)
+- [studio 3t community](https://formulae.brew.sh/cask/studio-3t-community#default)
+
 ### Running
 
 - Activate venv if not already active
