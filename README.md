@@ -1,33 +1,14 @@
 # Route Logger Backend
 
-## Setup
+FastAPI REST API for [Route Logger FE project](https://github.com/PearlisSad/route-logger-fe).
 
-## Running
+## Initial setup
 
-- Activate venv if not already active
-  - Mac/Linux: `source <venv directory>/bin/activate`.
-  - Windows: `workon MyProjectEnvt`
-- Apply migrations `python manage.py migrate`.
-- Run server `python manage.py runserver`.
-- `workon MyProjectEnvt`
-
-## Description
-
-Backend for the Route Logger application.
-Django project that uses REST api to communicate with React frontend.
-Front end projext found [here](https://github.com/PearlisSad/route-logger-fe).
-
-- **Django** – Python backend framework used to handle server-side logic and database models.
-- **django-cors-headers** – Enables Cross-Origin Resource Sharing (CORS) to allow requests from the React frontend.
-- **djangorestframework** – Provides tools for building RESTful APIs, including serialization, authentication, and class-based views.
-
-## Getting Started
-
-### Setup
-
-- Install pyenv.
+- [Install pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv).
 - Install python according to version specified in `.python-version`.
 - Install packages with `pip install -r ./requirements.txt`.
+  - Note that when adding dependencies to the project, add them to `src/requirements/requirements.in`.
+  - The changes should then be reflected to the requirements.txt by running `pip-compile --strip-extras src/requirements/requirements.in`
 - Create python virtual env `python -m venv`.
   - See docs for more information -[Create Python Virtual Environment](https://docs.python.org/3/library/venv.html)
 - Start Virtual Environment
@@ -35,22 +16,16 @@ Front end projext found [here](https://github.com/PearlisSad/route-logger-fe).
   - Mac: `source venv/bin/activate`
 - To deactivate the Virtual Environment, just execute `deactivate` while the Virtual Environment is running.
 
-### Database
-
-Reference:
-
-- [mongo local docker](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)
-- [django mongo](https://www.mongodb.com/resources/products/compatibilities/mongodb-and-django)
-- [studio 3t community](https://formulae.brew.sh/cask/studio-3t-community#default)
-
-### Running
+## Running
 
 - Activate venv if not already active
   - Mac/Linux: `source <venv directory>/bin/activate`.
   - Windows: `workon MyProjectEnvt`
-- Apply migrations `python manage.py migrate`.
-- Run server `python manage.py runserver`.
-- `workon MyProjectEnvt`
+- Install the dependencies if not already present: `pip install -r requirements.txt`
+- Export the desired MongoDB URL address. For local it should be: `export MONGODB_URL="mongodb://localhost:27017"`
+- Run the service using: `uvicorn src.main:app --reload`
+
+Now you can load http://localhost:8000/docs in your browser.
 
 ### Dependencies
 
@@ -58,12 +33,12 @@ Reference:
 
 ## Authors
 
-[Rapha](https://github.com/PearlisSad)
-
-[Jun](https://github.com/JunSmith)
+- [Rapha](https://github.com/PearlisSad)
+- [Jun](https://github.com/JunSmith)
 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
 
-- [Django React Authentication](<[https://github.com/matiassingers/awesome-readme](https://github.com/desphixs/JWT-Django-Rest-Framework-React)>)
+- [Django React Authentication](https://github.com/desphixs/JWT-Django-Rest-Framework-React)
+- [FastAPI Quick Start blog post](https://developer.mongodb.com/quickstart/python-quickstart-fastapi/)
