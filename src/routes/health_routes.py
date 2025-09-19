@@ -10,4 +10,3 @@ router = APIRouter(prefix='/api/health', tags=['health'], responses={404: {"desc
 )
 async def get_health():
     return responses.Response(status_code=status.HTTP_200_OK)
-
