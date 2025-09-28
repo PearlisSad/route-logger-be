@@ -5,12 +5,12 @@ FastAPI REST API for [Route Logger FE project](https://github.com/PearlisSad/rou
 ## Initial setup
 
 - [Install pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#a-getting-pyenv).
-- Install python according to version specified in `.python-version`.
+- Install python according to version specified in `.python-version`: `pyenv local "$(cat .python-version)"`.
+- Create python virtual env `python -m venv .venv`. You should notice in your command line a `(.venv)` at the start of it.
+  - See docs for more information -[Create Python Virtual Environment](https://docs.python.org/3/library/venv.html)
 - Install packages with `pip install -r ./requirements.txt`.
   - Note that when adding dependencies to the project, add them to `src/requirements/requirements.in`.
   - The changes should then be reflected to the requirements.txt by running `pip-compile --strip-extras src/requirements/requirements.in`
-- Create python virtual env `python -m venv`.
-  - See docs for more information -[Create Python Virtual Environment](https://docs.python.org/3/library/venv.html)
 - Start Virtual Environment
   - Windows: `venv\Scripts\Activate.ps1`
   - Mac: `source venv/bin/activate`
