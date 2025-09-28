@@ -13,8 +13,8 @@ collection = mongo_client.client.route_logger.get_collection('walls')
     status_code=status.HTTP_201_CREATED,
     response_model_by_alias=False,
 )
-async def create(student: WallModel = Body(...)):
-    new_object = student.model_dump(by_alias=True, exclude=["id"])
+async def create(wall: WallModel = Body(...)):
+    new_object = wall.model_dump(by_alias=True, exclude=["id"])
     result = await collection.insert_one(new_object)
     new_object["_id"] = result.inserted_id
     return new_object
