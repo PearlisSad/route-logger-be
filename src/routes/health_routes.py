@@ -1,6 +1,9 @@
 from fastapi import status, APIRouter, responses
 
-router = APIRouter(prefix='/api/health', tags=['health'], responses={404: {"description": "Not found"}})
+router = APIRouter(
+    prefix="/api/health", tags=["health"], responses={404: {"description": "Not found"}}
+)
+
 
 @router.get(
     "/",

@@ -3,8 +3,11 @@ from fastapi import Body, status, APIRouter
 from ..models.route_model import RouteModel, RouteCollection
 from ..clients import mongo_client
 
-router = APIRouter(prefix='/api/routes', tags=['routes'], responses={404: {"description": "Not found"}})
-collection = mongo_client.client.route_logger.get_collection('routes')
+router = APIRouter(
+    prefix="/api/routes", tags=["routes"], responses={404: {"description": "Not found"}}
+)
+collection = mongo_client.client.route_logger.get_collection("routes")
+
 
 @router.post(
     "/",
@@ -28,4 +31,3 @@ async def create(route: RouteModel = Body(...)):
 )
 async def list():
     return RouteCollection(routes=await collection.find().to_list(1000))
-

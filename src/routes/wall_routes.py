@@ -3,8 +3,11 @@ from fastapi import Body, status, APIRouter
 from ..models.wall_model import WallModel, WallCollection
 from ..clients import mongo_client
 
-router = APIRouter(prefix='/api/walls', tags=['walls'], responses={404: {"description": "Not found"}})
-collection = mongo_client.client.route_logger.get_collection('walls')
+router = APIRouter(
+    prefix="/api/walls", tags=["walls"], responses={404: {"description": "Not found"}}
+)
+collection = mongo_client.client.route_logger.get_collection("walls")
+
 
 @router.post(
     "/",
@@ -28,4 +31,3 @@ async def create(wall: WallModel = Body(...)):
 )
 async def list():
     return WallCollection(walls=await collection.find().to_list(1000))
-

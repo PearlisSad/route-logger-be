@@ -2,7 +2,6 @@ from typing import Optional, List
 from typing_extensions import Annotated
 from pydantic import ConfigDict, BaseModel, Field
 from pydantic.functional_validators import BeforeValidator
-from typing_extensions import Annotated
 from datetime import datetime
 from bson import ObjectId
 

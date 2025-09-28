@@ -2,11 +2,11 @@ from typing import Optional, List
 from typing_extensions import Annotated
 from pydantic import ConfigDict, BaseModel, Field
 from pydantic.functional_validators import BeforeValidator
-from typing_extensions import Annotated
 
 # Represents an ObjectId field in the database.
 # It will be represented as a `str` on the model so that it can be serialized to JSON.
 PyObjectId = Annotated[str, BeforeValidator(str)]
+
 
 class WallModel(BaseModel):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)
@@ -22,9 +22,10 @@ class WallModel(BaseModel):
             }
         },
     )
-    
-class WallModel(BaseModel):
-    id: PyObjectId = Field(..., alias='_id')
+
+
+class UpdateWallModel(BaseModel):
+    id: PyObjectId = Field(..., alias="_id")
     name: Optional[str] = None
     open: bool = False
     model_config = ConfigDict(

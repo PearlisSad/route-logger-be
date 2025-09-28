@@ -27,9 +27,9 @@ FastAPI REST API for [Route Logger FE project](https://github.com/PearlisSad/rou
 
 Now you can load http://localhost:8000/docs in your browser.
 
-### Dependencies
+### Additional Recommendations
 
-- Python 3.10+
+- [VSCode Ruff extension](https://github.com/astral-sh/ruff-vscode)
 
 ## Authors
 
