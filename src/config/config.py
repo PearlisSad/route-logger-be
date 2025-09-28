@@ -4,11 +4,8 @@ from functools import lru_cache
 __all__ = ["get_settings"] 
 
 class _Settings(BaseSettings): 
-    app_name: str = "Awesome API"
-    items_per_user: int = 50
-    mongodb_url: str
-
     model_config = SettingsConfigDict(env_file=".env")
+    mongodb_url: str
 
 
 @lru_cache()
