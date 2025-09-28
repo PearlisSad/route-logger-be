@@ -24,7 +24,7 @@ FastAPI REST API for [Route Logger FE project](https://github.com/PearlisSad/rou
   - Windows: `workon MyProjectEnvt`.
 - Install the dependencies if not already present: `pip install -r requirements.txt`.
 - Export the desired MongoDB URL address. For local it should be: `export MONGODB_URL="mongodb://localhost:27017"`.
-- Run the service using: `uvicorn src.main:app --reload`.
+- Run the service using: `just run`.
 
 Now you can load http://localhost:8000/docs in your browser.
 
